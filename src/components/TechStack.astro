@@ -12,9 +12,9 @@ import { certifications, technologies } from "../data/portfolio";
     <p class="cert-note">
       Certifications:
       {
-        certifications.map((item, index) => (
+        certifications.map((item) => (
           <>
-            {index > 0 ? <br /> : " "}
+            <br />
             <strong>{item}</strong>
           </>
         ))
