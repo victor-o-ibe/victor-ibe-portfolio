@@ -139,7 +139,7 @@ export const architectureFlow = {
     "Governance",
     "Controlled Action",
     "Outcome Verification",
-    "Learning",
+    "Machine Learning",
   ],
 };
 
@@ -172,7 +172,7 @@ export const education: EducationItem[] = [
   },
   {
     credential: "Master of Science",
-    field: "Quality & Engineering Management",
+    field: "Engineering Management",
     institution: "Tarleton State University",
   },
 ];
