@@ -24,7 +24,7 @@ export const featuredProject: FeaturedProject = {
   subtitle:
     "Master of Engineering Thesis | Machine Intelligence & Data Science | Arcada University of Applied Sciences",
   intro:
-    "Cloud optimization systems can recommend an action and estimate its savings. A harder problem is determining whether that recommendation should be trusted for implementation and whether the predicted benefit actually materialized afterward.",
+    "Cloud optimization systems can recommend an action and estimate its savings. The harder problem is whether that recommendation should be trusted for implementation, and whether the predicted benefit actually appeared afterward.",
   problem:
     "A predicted saving is not the same thing as a verified saving. Production optimization therefore requires evidence before an action, controls around the action, and measurement afterward.",
   approach:
@@ -41,7 +41,7 @@ export const featuredProject: FeaturedProject = {
     "Rollback Safety",
   ],
   whyItMatters:
-    "The work focuses on moving ML-supported recommendations beyond prediction and into production environments where decisions must be explainable, measurable and governable.",
+    "The work is about taking ML-supported recommendations past prediction and into production, where decisions have to be explainable, measurable and governable.",
   ctaLabel: "Read Published Thesis",
   href: "https://www.theseus.fi/handle/10024/929540",
 };

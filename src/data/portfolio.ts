@@ -81,11 +81,11 @@ export const hero = {
 export const about = {
   heading: "Engineering cloud and intelligent systems for production.",
   paragraphs: [
-    "I am an Advisory Solutions Architect and Technical Lead with a background spanning cloud architecture, enterprise solution design, technical leadership and AI-enabled systems.",
-    "During four years at IBM, my work included cloud and AI-integrated environments and exposure to the Watson ecosystem, including speech, text and neural-network technologies.",
-    "My work later developed more deeply around AWS architecture, cloud modernization, infrastructure automation, Kubernetes, data platforms and production reliability.",
-    "I recently completed a Master of Engineering in Machine Intelligence and Data Science at Arcada University of Applied Sciences in Finland, extending that engineering foundation into machine learning, data science and intelligent systems.",
-    "I am particularly interested in the engineering layer between an ML prediction and a trustworthy production outcome: deployment, evidence, governance, observability, verification and operational safety.",
+    "I am an Advisory Solutions Architect and Technical Lead. The through-line in my work is taking complex technology and turning it into systems that can be operated, governed and measured.",
+    "I spent four years at IBM in enterprise technology, including cloud and AI-integrated environments and the Watson ecosystem around speech, text and neural-network technologies. That work was about connecting engineering requirements with business objectives.",
+    "From there the focus moved more deeply into AWS and cloud architecture: modernization, infrastructure automation, Kubernetes, data platforms, production reliability and technical leadership.",
+    "I recently completed a Master of Engineering in Machine Intelligence and Data Science at Arcada University of Applied Sciences in Finland. That step extended the same engineering foundation into machine learning, data science and intelligent systems.",
+    "I am now most interested in the layer between an ML prediction and a trustworthy production outcome: deployment, evidence, governance, observability, verification and operational safety.",
   ],
 };
 
@@ -150,7 +150,7 @@ export const experience: ExperienceItem[] = [
     title: "Advisory Solutions Architect / Technical Lead",
     organization: "Current",
     description:
-      "Cloud, data and AI/ML systems architecture with a focus on scalable, reliable and commercially useful production systems.",
+      "Cloud, data and AI/ML systems architecture, with a focus on systems that are scalable, reliable and useful in production.",
   },
   {
     title: "IBM",

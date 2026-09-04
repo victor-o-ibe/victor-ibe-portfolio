@@ -1,8 +1,8 @@
-# Victor Ibe — technical portfolio
+# Victor Ibe technical portfolio
 
 Public recruiter-facing site for Victor Ibe, covering AWS, cloud architecture, AI/ML systems and MLOps.
 
-Live site (GitHub Pages): https://Howards12.github.io/victor-ibe-portfolio/
+Live site: https://howards12.github.io/victor-ibe-portfolio/
 
 ## Stack
 
@@ -44,9 +44,9 @@ Optional: add a PDF resume under `public/resume/` and link it from the data file
 
 The site is configured for:
 
-`https://Howards12.github.io/victor-ibe-portfolio/`
+https://howards12.github.io/victor-ibe-portfolio/
 
-In the GitHub repository: **Settings → Pages → Source → GitHub Actions**.
+In the GitHub repository, open Settings, then Pages, and confirm the source is GitHub Actions.
 
 If you later attach a custom domain, update `site` in `astro.config.mjs` and remove `base`.
 
