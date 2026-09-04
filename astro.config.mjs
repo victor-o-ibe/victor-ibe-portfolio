@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-const githubUser = "Howards12";
+const githubUser = "victor-o-ibe";
 const repoName = "victor-ibe-portfolio";
 
 export default defineConfig({
