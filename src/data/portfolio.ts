@@ -48,8 +48,7 @@ export const contact: ContactLinks = {
 };
 
 export const profile = {
-  // Place a public photo in public/images/profile/ and set e.g. "images/profile/victor-ibe.jpg"
-  image: "",
+  image: "images/profile/victor-ibe.jpg",
 };
 
 export const navigation: NavItem[] = [

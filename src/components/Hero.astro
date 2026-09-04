@@ -33,9 +33,9 @@ const photo = hasValue(profile.image) ? withBase(profile.image) : null;
       </div>
       <p class="credibility">{hero.credibility}</p>
     </div>
-    <div class="portrait" aria-hidden={photo ? undefined : "true"}>
+    <div class="portrait">
       {photo ? (
-        <img src={photo} alt={`${hero.name} professional portrait`} width="420" height="525" />
+        <img src={photo} alt={`${hero.name} professional portrait`} width="400" height="400" />
       ) : (
         <div class="portrait-fallback">VI</div>
       )}

@@ -420,11 +420,11 @@ a:hover {
 .portrait {
   justify-self: start;
   width: min(100%, 16rem);
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius);
+  aspect-ratio: 1;
+  border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, var(--accent-soft), var(--surface));
+  background: var(--surface);
   box-shadow: var(--shadow);
 }
 
