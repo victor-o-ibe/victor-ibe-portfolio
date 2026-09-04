@@ -1,5 +1,5 @@
 ---
-import { certification, technologies } from "../data/portfolio";
+import { certifications, technologies } from "../data/portfolio";
 ---
 
 <section class="section section-alt" id="technologies" aria-labelledby="tech-heading">
@@ -10,7 +10,15 @@ import { certification, technologies } from "../data/portfolio";
       {technologies.map((item) => <li class="chip">{item}</li>)}
     </ul>
     <p class="cert-note">
-      Certification: <strong>{certification}</strong>
+      Certifications:
+      {
+        certifications.map((item, index) => (
+          <>
+            {index > 0 ? <br /> : " "}
+            <strong>{item}</strong>
+          </>
+        ))
+      }
     </p>
   </div>
 </section>

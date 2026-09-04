@@ -201,7 +201,11 @@ export const technologies = [
   "Data Platforms",
 ];
 
-export const certification = "AWS Certified Solutions Architect";
+export const certifications = [
+  "AWS Certified Solutions Architect",
+  "IBM Agile Thought Leader",
+  "Microsoft Certified: Azure Fundamentals",
+];
 
 export const contactSection = {
   heading: "Let's build useful systems.",
