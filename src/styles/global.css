@@ -379,6 +379,57 @@ a:hover {
   }
 }
 
+@media (max-width: 959.98px) {
+  :root {
+    --space-section: clamp(3.7rem, 7vw, 5.4rem);
+  }
+
+  .hero {
+    padding-top: clamp(2.85rem, 7vw, 5rem);
+    padding-bottom: clamp(3.25rem, 7vw, 5.4rem);
+  }
+
+  .hero-grid {
+    gap: 0;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero .eyebrow {
+    order: 1;
+  }
+
+  .hero h1 {
+    order: 2;
+  }
+
+  .hero .headline {
+    order: 3;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero .portrait {
+    order: 4;
+    justify-self: center;
+    width: min(16.25rem, 260px, 70vw);
+    margin: 0.5rem 0 1.35rem;
+  }
+
+  .hero .lede {
+    order: 5;
+  }
+
+  .hero .btn-row {
+    order: 6;
+  }
+
+  .hero .credibility {
+    order: 7;
+  }
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--accent);
