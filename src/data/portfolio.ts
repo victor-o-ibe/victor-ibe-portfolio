@@ -145,21 +145,22 @@ export const architectureFlow = {
 
 export const experience: ExperienceItem[] = [
   {
-    title: "Advisory Solutions Architect / Technical Lead",
-    organization: "Current",
+    title: "Principal Solutions Architect",
+    organization: "EWS (Elite Web Services) | June 2025 - Present",
     description:
-      "Cloud, data and AI/ML systems architecture, with a focus on systems that are scalable, reliable and useful in production.",
+      "Design and lead AWS cloud, data and AI solution architecture, including reusable reference architectures, cloud modernization, technical governance and production-focused AI/ML systems.",
   },
   {
-    title: "IBM",
-    organization: "IBM | 4 Years",
+    title: "Advisory Solutions Architect",
+    organization: "IBM | February 2021 - October 2024",
     description:
-      "Worked across cloud and AI-integrated environments, including the Watson ecosystem, while supporting technical solutions connecting engineering requirements with business objectives.",
+      "Worked across enterprise cloud and AI-integrated environments, including the Watson ecosystem, supporting solution architecture, client-facing technical engagements, architecture reviews and AWS, data and AI initiatives.",
   },
   {
-    title: "Engineering & Consulting",
+    title: "Founder and Lead Instructor, Part-Time",
+    organization: "Ivy Training & Consulting | June 2024 - Present",
     description:
-      "AWS architecture, cloud modernization, infrastructure, technical leadership and engineering enablement.",
+      "Founded and lead technical training and enablement focused on AWS cloud architecture, cloud-native systems and AI/ML integration, mentoring engineers and cloud professionals.",
   },
 ];
 
