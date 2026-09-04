@@ -42,10 +42,9 @@ export const site = {
 };
 
 export const contact: ContactLinks = {
-  // Empty values omit the related buttons until real public details are supplied.
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/victor-ibe-cloud",
   githubUrl: "https://github.com/victor-o-ibe",
-  email: "",
+  email: "victoribe.tech@gmail.com",
 };
 
 export const profile = {
