@@ -10,10 +10,12 @@ const photo = hasValue(profile.image) ? withBase(profile.image) : null;
 
 <section class="hero wrap" aria-labelledby="hero-name">
   <div class="hero-grid">
-    <div class="hero-copy">
+    <div class="hero-intro">
       <p class="eyebrow">{hero.eyebrow}</p>
       <h1 id="hero-name">{hero.name}</h1>
       <p class="headline">{hero.headline}</p>
+    </div>
+    <div class="hero-rest">
       {hero.body.map((paragraph) => <p class="lede">{paragraph}</p>)}
       <div class="btn-row">
         <a class="btn btn-primary" href={sectionHref(hero.primaryCta.href)}>{hero.primaryCta.label}</a>

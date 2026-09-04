@@ -371,62 +371,66 @@ a:hover {
   gap: 2.5rem;
 }
 
-@media (min-width: 960px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 1.6fr) minmax(12rem, 0.55fr);
-    align-items: end;
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 959.98px) {
+@media (max-width: 719.98px) {
   :root {
-    --space-section: clamp(3.7rem, 7vw, 5.4rem);
+    --space-section: 3.75rem;
   }
 
   .hero {
-    padding-top: clamp(2.85rem, 7vw, 5rem);
-    padding-bottom: clamp(3.25rem, 7vw, 5.4rem);
+    padding-top: 3rem;
+    padding-bottom: 3.25rem;
   }
 
   .hero-grid {
     gap: 0;
   }
 
-  .hero-copy {
-    display: contents;
-  }
-
-  .hero .eyebrow {
+  .hero-intro {
     order: 1;
   }
 
-  .hero h1 {
-    order: 2;
-  }
-
   .hero .headline {
-    order: 3;
-    margin-bottom: 0.85rem;
+    margin-bottom: 0;
   }
 
   .hero .portrait {
-    order: 4;
+    order: 2;
     justify-self: center;
-    width: min(16.25rem, 260px, 70vw);
-    margin: 0.5rem 0 1.35rem;
+    width: min(14.5rem, 100%);
+    margin-block: 1rem 1.15rem;
   }
 
-  .hero .lede {
-    order: 5;
+  .hero-rest {
+    order: 3;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 959.98px) {
+  .hero-grid {
+    row-gap: 0;
   }
 
-  .hero .btn-row {
-    order: 6;
+  .hero .portrait {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.6fr) minmax(12rem, 0.55fr);
+    align-items: end;
+    column-gap: 3rem;
+    row-gap: 0;
   }
 
-  .hero .credibility {
-    order: 7;
+  .hero-intro,
+  .hero-rest {
+    grid-column: 1;
+  }
+
+  .hero .portrait {
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 }
 
