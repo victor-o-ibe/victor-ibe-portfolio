@@ -1,0 +1,44 @@
+---
+import { navigation, site } from "../data/portfolio";
+import { sectionHref, withBase } from "../lib/paths";
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href={withBase()}>{site.name}</a>
+    <nav class="nav-desktop" aria-label="Primary">
+      {
+        navigation.map((item) => (
+          <a href={sectionHref(item.href)}>{item.label}</a>
+        ))
+      }
+    </nav>
+    <details class="nav-mobile">
+      <summary aria-label="Open menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </summary>
+      <nav class="nav-mobile-panel" aria-label="Mobile">
+        {
+          navigation.map((item) => (
+            <a href={sectionHref(item.href)}>{item.label}</a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  const menu = document.querySelector(".nav-mobile");
+  if (menu instanceof HTMLDetailsElement) {
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.open = false;
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") menu.open = false;
+    });
+  }
+</script>

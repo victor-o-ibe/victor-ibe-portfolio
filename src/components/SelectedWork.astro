@@ -1,0 +1,25 @@
+---
+import { selectedWork } from "../data/projects";
+---
+
+<section class="section" id="selected-work" aria-labelledby="selected-heading">
+  <div class="wrap">
+    <p class="section-kicker">Portfolio</p>
+    <h2 class="section-title" id="selected-heading">Selected work</h2>
+    <div class="card-grid work-grid">
+      {
+        selectedWork.map((item) => (
+          <article class="card work-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <ul class="chip-list">
+              {item.tags.map((tag) => (
+                <li class="chip">{tag}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import "../styles/global.css";
+import { site, contact, hasValue } from "../data/portfolio";
+import { withBase } from "../lib/paths";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.title, description = site.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const sameAs = [contact.linkedinUrl, contact.githubUrl].filter(hasValue);
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: "Advisory Solutions Architect and Technical Lead",
+  url: canonical,
+  description,
+  ...(sameAs.length ? { sameAs } : {}),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <meta name="theme-color" content="#f6f5f1" />
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={withBase("favicon.svg")} type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <slot />
+  </body>
+</html>

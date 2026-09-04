@@ -1,0 +1,33 @@
+---
+import { contact, contactSection, hasValue, mailtoHref } from "../data/portfolio";
+
+const linkedin = hasValue(contact.linkedinUrl) ? contact.linkedinUrl : null;
+const github = hasValue(contact.githubUrl) ? contact.githubUrl : null;
+const email = hasValue(contact.email) ? mailtoHref(contact.email) : null;
+const hasAny = Boolean(linkedin || github || email);
+---
+
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="wrap">
+    <p class="section-kicker">Contact</p>
+    <h2 class="section-title" id="contact-heading">{contactSection.heading}</h2>
+    <p class="lede">{contactSection.body}</p>
+    {hasAny && (
+      <div class="btn-row btn-row-spaced">
+        {linkedin && (
+          <a class="btn btn-primary" href={linkedin} rel="noopener noreferrer" target="_blank">
+            Connect on LinkedIn
+          </a>
+        )}
+        {github && (
+          <a class="btn btn-secondary" href={github} rel="noopener noreferrer" target="_blank">
+            GitHub
+          </a>
+        )}
+        {email && (
+          <a class="btn btn-secondary" href={email}>Email</a>
+        )}
+      </div>
+    )}
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import { education } from "../data/portfolio";
+---
+
+<section class="section" id="education" aria-labelledby="education-heading">
+  <div class="wrap">
+    <p class="section-kicker">Education</p>
+    <h2 class="section-title" id="education-heading">Education</h2>
+    <div class="edu-list">
+      {
+        education.map((item) => (
+          <article class="card edu-card">
+            <h3>{item.credential}</h3>
+            <p class="edu-field">{item.field}</p>
+            <p class="edu-school">{item.institution}</p>
+            {item.href && (
+              <a class="edu-link" href={item.href} rel="noopener noreferrer" target="_blank">
+                Read published thesis
+              </a>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

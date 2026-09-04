@@ -1,0 +1,44 @@
+---
+import { contact, hasValue, hero, mailtoHref, profile } from "../data/portfolio";
+import { sectionHref, withBase } from "../lib/paths";
+
+const linkedin = hasValue(contact.linkedinUrl) ? contact.linkedinUrl : null;
+const github = hasValue(contact.githubUrl) ? contact.githubUrl : null;
+const email = hasValue(contact.email) ? mailtoHref(contact.email) : null;
+const photo = hasValue(profile.image) ? withBase(profile.image) : null;
+---
+
+<section class="hero wrap" aria-labelledby="hero-name">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">{hero.eyebrow}</p>
+      <h1 id="hero-name">{hero.name}</h1>
+      <p class="headline">{hero.headline}</p>
+      {hero.body.map((paragraph) => <p class="lede">{paragraph}</p>)}
+      <div class="btn-row">
+        <a class="btn btn-primary" href={sectionHref(hero.primaryCta.href)}>{hero.primaryCta.label}</a>
+        {linkedin && (
+          <a class="btn btn-secondary" href={linkedin} rel="noopener noreferrer" target="_blank">
+            LinkedIn
+          </a>
+        )}
+        {github && (
+          <a class="btn btn-secondary" href={github} rel="noopener noreferrer" target="_blank">
+            GitHub
+          </a>
+        )}
+        {email && (
+          <a class="btn btn-secondary" href={email}>Email</a>
+        )}
+      </div>
+      <p class="credibility">{hero.credibility}</p>
+    </div>
+    <div class="portrait" aria-hidden={photo ? undefined : "true"}>
+      {photo ? (
+        <img src={photo} alt={`${hero.name} professional portrait`} width="420" height="525" />
+      ) : (
+        <div class="portrait-fallback">VI</div>
+      )}
+    </div>
+  </div>
+</section>

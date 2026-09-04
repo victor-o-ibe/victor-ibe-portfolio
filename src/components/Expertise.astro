@@ -1,0 +1,20 @@
+---
+import { expertise } from "../data/portfolio";
+---
+
+<section class="section" id="expertise" aria-labelledby="expertise-heading">
+  <div class="wrap">
+    <p class="section-kicker">Capabilities</p>
+    <h2 class="section-title" id="expertise-heading">Core expertise</h2>
+    <div class="card-grid expertise-grid">
+      {
+        expertise.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

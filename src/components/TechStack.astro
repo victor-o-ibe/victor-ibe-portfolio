@@ -1,0 +1,16 @@
+---
+import { certification, technologies } from "../data/portfolio";
+---
+
+<section class="section section-alt" id="technologies" aria-labelledby="tech-heading">
+  <div class="wrap">
+    <p class="section-kicker">Technologies</p>
+    <h2 class="section-title" id="tech-heading">Technologies</h2>
+    <ul class="chip-list">
+      {technologies.map((item) => <li class="chip">{item}</li>)}
+    </ul>
+    <p class="cert-note">
+      Certification: <strong>{certification}</strong>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+---
+import { about } from "../data/portfolio";
+---
+
+<section class="section section-alt" id="about" aria-labelledby="about-heading">
+  <div class="wrap">
+    <p class="section-kicker">About</p>
+    <h2 class="section-title" id="about-heading">{about.heading}</h2>
+    <div class="prose">
+      {about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </div>
+</section>

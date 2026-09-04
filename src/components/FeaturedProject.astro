@@ -1,0 +1,46 @@
+---
+import ArchitectureFlow from "./ArchitectureFlow.astro";
+import { featuredProject } from "../data/projects";
+---
+
+<section class="section section-alt" id="featured-work" aria-labelledby="featured-heading">
+  <div class="wrap featured">
+    <div class="featured-copy">
+      <p class="section-kicker">{featuredProject.label}</p>
+      <h2 class="section-title" id="featured-heading">{featuredProject.title}</h2>
+      <p class="featured-subtitle">{featuredProject.subtitle}</p>
+      <div class="prose">
+        <p>{featuredProject.intro}</p>
+      </div>
+      <div class="feature-block">
+        <h3>Problem</h3>
+        <p>{featuredProject.problem}</p>
+      </div>
+      <div class="feature-block">
+        <h3>Approach</h3>
+        <p>{featuredProject.approach}</p>
+      </div>
+      <div class="feature-block">
+        <h3>Engineering themes</h3>
+        <ul class="chip-list">
+          {featuredProject.themes.map((theme) => <li class="chip">{theme}</li>)}
+        </ul>
+      </div>
+      <div class="feature-block">
+        <h3>Why it matters</h3>
+        <p>{featuredProject.whyItMatters}</p>
+      </div>
+      <p class="btn-row btn-row-spaced">
+        <a
+          class="btn btn-primary"
+          href={featuredProject.href}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {featuredProject.ctaLabel}
+        </a>
+      </p>
+    </div>
+    <ArchitectureFlow />
+  </div>
+</section>

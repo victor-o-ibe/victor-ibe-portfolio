@@ -1,0 +1,21 @@
+---
+import { experience } from "../data/portfolio";
+---
+
+<section class="section section-alt" id="experience" aria-labelledby="experience-heading">
+  <div class="wrap">
+    <p class="section-kicker">Experience</p>
+    <h2 class="section-title" id="experience-heading">Experience</h2>
+    <ol class="timeline">
+      {
+        experience.map((item) => (
+          <li class="timeline-item">
+            <h3>{item.title}</h3>
+            {item.organization && <p class="timeline-org">{item.organization}</p>}
+            <p>{item.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
